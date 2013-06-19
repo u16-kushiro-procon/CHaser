@@ -2,4 +2,4 @@
 
 CHaser2013.rbを使うと最後にエラーが出るので修正中です．
 
-`ruby ./CHaserConnect port`
+`ruby ./CHaser2013 port`
