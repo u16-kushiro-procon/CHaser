@@ -24,6 +24,7 @@ class CHaserConnect
     return results
   end
 
+  # 右に進む
   def walkRight()
     @socket.puts("wr\r\n")
     msg = @socket.gets
@@ -32,6 +33,7 @@ class CHaserConnect
     return results
   end
 
+  # 左に進む
   def walkLeft()
     @socket.puts("wl\r\n")
     msg = @socket.gets
@@ -40,6 +42,7 @@ class CHaserConnect
     return results
   end
 
+  # 上に進む
   def walkUp()
     @socket.puts("wu\r\n")
     msg = @socket.gets
@@ -48,6 +51,7 @@ class CHaserConnect
     return results
   end
 
+  # 下に進む
   def walkDown()
     @socket.puts("wd\r\n")
     msg = @socket.gets
@@ -164,45 +168,5 @@ class CHaserConnect
 
   def close
     @socket.close
-  end
-end
-
-#---- main ----
-
-target = CHaserConnect.new("", 'localhost', ARGV[0])
-values = Array.new(10)
-
-loop do
-  values = target.getReady
-  if values[0] == 0
-    break
-  end
-  values = target.searchUp
-  if values[0] == 0
-    break
-  end
-  values = target.getReady
-  if values[0] == 0
-    break
-  end
-  values = target.searchRight
-  if values[0] == 0
-    break
-  end
-  values = target.getReady
-  if values[0] == 0
-    break
-  end
-  values = target.searchDown
-  if values[0] == 0
-    break
-  end
-  values = target.getReady
-  if values[0] == 0
-    break
-  end
-  values = target.searchLeft
-  if values[0] == 0
-    break
   end
 end
