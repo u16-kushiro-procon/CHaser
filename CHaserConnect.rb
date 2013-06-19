@@ -167,6 +167,8 @@ class CHaserConnect
   end
 end
 
+#---- main ----
+
 target = CHaserConnect.new("", 'localhost', ARGV[0])
 values = Array.new(10)
 
