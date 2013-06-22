@@ -5,7 +5,7 @@
 require 'socket'
 
 class CHaserConnect
-  def initialize(name, host = 'localhost', port)
+  def initialize(name, host='localhost', port)
     @name = name
     @host = host
     @port = port
@@ -161,6 +161,7 @@ class CHaserConnect
 
     for i in 0..9
       results[i] = str[i].to_i
+      #print results[i]
     end
 
     return results

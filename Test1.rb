@@ -3,7 +3,7 @@
 require './CHaserConnect.rb'
 #require 'socket'
 
-target = CHaserConnect.new("", ARGV[0])
+target = CHaserConnect.new("", 'localhost', ARGV[0])
 values = Array.new(10)
 
 loop do
