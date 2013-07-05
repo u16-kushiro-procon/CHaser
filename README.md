@@ -1,5 +1,12 @@
-これは全国高校生プログラミングコンテスト CHaser（ http://www.zenjouken.com/?page_id=517 ） のクライアントプログラムです．
+これは全国高校生プログラミングコンテスト CHaser（ http://www.zenjouken.com/?page_id=517 ） のRubyクライアントプログラムです．
 
-`ruby ./CHaser2013.rb port`
+サーバプログラムを起動したあとに
+別の端末で  
+`ruby ./Test1.rb`
 でサーバに接続します．
-CHaser2013.rbを書き換えて自分なりのプログラムを開発してください．  
+また別の端末で
+`ruby ./Test2.rb`
+
+Test1.rb, Test1.rbのrequireの部分は環境によって書き換えてください．
+
+CHaser2013.rb等を書き換えて自分なりのプログラムを開発してください．  
