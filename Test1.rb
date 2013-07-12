@@ -8,8 +8,10 @@ require './CHaserConnect.rb' # UNIX
 # サーバに接続
 #target = CHaserConnect.new("名前", ポート番号, 'ipアドレス') # 名前は4文字まで
 # 例
-target = CHaserConnect.new("全日本", 2009, 'localhost') # そのときに合わせて書き換える
+target = CHaserConnect.new("", 2009, '192.168.1.7') # そのときに合わせて書き換える
+#target = CHaserConnect.new("", ARGV[0], 'localhost')  プログラムを起動する際にポート番号を指定する場合
 
+# 配列の初期化
 values = Array.new(10) # 書き換えない
 
 loop do # 無限ループ
