@@ -50,7 +50,7 @@ class CHaserConnect
     begin
       puts "\"#{@name.encode("UTF-8")}\"はgetReadyをサーバに送信"
       msg = @socket.gets
-      @socket.puts("gr\r")
+      @socket.write("gr\r\n")
       msg = @socket.gets
       results = parseInt(msg)
       return results
@@ -63,10 +63,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def walkRight()
     puts "\"#{@name.encode("UTF-8")}\"はwalkRightをサーバに送信"
-    @socket.puts("wr\r")
+    @socket.write("wr\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -74,10 +74,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def walkLeft()
     puts "\"#{@name.encode("UTF-8")}\"はwalkLeftをサーバに送信"
-    @socket.puts("wl\r")
+    @socket.write("wl\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -85,10 +85,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def walkUp()
     puts "\"#{@name.encode("UTF-8")}\"はwalkUpをサーバに送信"
-    @socket.puts("wu\r")
+    @socket.write("wu\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -96,10 +96,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def walkDown()
     puts "\"#{@name.encode("UTF-8")}\"はwalkDownをサーバに送信"
-    @socket.puts("wd\r")
+    @socket.write("wd\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -107,10 +107,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def lookRight()
     puts "\"#{@name.encode("UTF-8")}\"はlookRightをサーバに送信"
-    @socket.puts("lr\r")
+    @socket.write("lr\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -118,10 +118,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def lookLeft()
     puts "\"#{@name.encode("UTF-8")}\"はlookLeftをサーバに送信"
-    @socket.puts("ll\r")
+    @socket.write("ll\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -129,10 +129,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def lookUp()
     puts "\"#{@name.encode("UTF-8")}\"はlookUpをサーバに送信"
-    @socket.puts("lu\r")
+    @socket.write("lu\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -140,10 +140,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def lookDown()
     puts "\"#{@name.encode("UTF-8")}\"はlookDownをサーバに送信"
-    @socket.puts("ld\r")
+    @socket.write("ld\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -151,10 +151,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def searchRight()
     puts "\"#{@name.encode("UTF-8")}\"はsearchRightをサーバに送信"
-    @socket.puts("sr\r")
+    @socket.write("sr\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -162,10 +162,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def searchLeft()
     puts "\"#{@name.encode("UTF-8")}\"はsearchLeftをサーバに送信"
-    @socket.puts("sl\r")
+    @socket.write("sl\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -173,10 +173,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def searchUp()
     puts "\"#{@name.encode("UTF-8")}\"はsearchUpをサーバに送信"
-    @socket.puts("su\r")
+    @socket.write("su\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -184,10 +184,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def searchDown()
     puts "\"#{@name.encode("UTF-8")}\"はsearchDownをサーバに送信"
-    @socket.puts("sd\r")
+    @socket.write("sd\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -195,10 +195,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def putRight()
     puts "\"#{@name.encode("UTF-8")}\"はputRightをサーバに送信"
-    @socket.puts("pr\r")
+    @socket.write("pr\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -206,10 +206,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def putLeft()
     puts "\"#{@name.encode("UTF-8")}\"はputLeftをサーバに送信"
-    @socket.puts("pl\r")
+    @socket.write("pl\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -217,10 +217,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def putUp()
     puts "\"#{@name.encode("UTF-8")}\"はputUpをサーバに送信"
-    @socket.puts("pu\r")
+    @socket.write("pu\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -228,10 +228,10 @@ class CHaserConnect
   # Return:: 制御情報と周囲情報
   def putDown()
     puts "\"#{@name.encode("UTF-8")}\"はputDownをサーバに送信"
-    @socket.puts("pd\r")
+    @socket.write("pd\r\n")
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
@@ -331,52 +331,52 @@ class CHaserConnect
     when "walk", 0
       case direction
       when "up", 0
-        @socket.puts("wu\r")
+        @socket.write("wu\r\n")
       when "down", 1
-        @socket.puts("wd\r")
+        @socket.write("wd\r\n")
       when "left", 2
-        @socket.puts("wl\r")
+        @socket.write("wl\r\n")
       when "right", 3
-        @socket.puts("wr\r")
+        @socket.write("wr\r\n")
       end
     when "search", 1
       case direction
       when "up", 0
-        @socket.puts("su\r")
+        @socket.write("su\r\n")
       when "down", 1
-        @socket.puts("sd\r")
+        @socket.write("sd\r\n")
       when "left", 2
-        @socket.puts("sl\r")
+        @socket.write("sl\r\n")
       when "right", 3
-        @socket.puts("sr\r")
+        @socket.write("sr\r\n")
       end   
     when "look", 2
       case direction
       when "up", 0
-        @socket.puts("lu\r")
+        @socket.write("lu\r\n")
       when "down", 1
-        @socket.puts("ld\r")
+        @socket.write("ld\r\n")
       when "left", 2
-        @socket.puts("ll\r")
+        @socket.write("ll\r\n")
       when "right", 3
-        @socket.puts("lr\r")
+        @socket.write("lr\r\n")
       end   
     when "put", 3
       case direction
       when "up", 0
-        @socket.puts("pu\r")
+        @socket.write("pu\r\n")
       when "down", 1
-        @socket.puts("pd\r")
+        @socket.write("pd\r\n")
       when "left", 2
-        @socket.puts("pl\r")
+        @socket.write("pl\r\n")
       when "right", 3
-        @socket.puts("pr\r")
+        @socket.write("pr\r\n")
       end   
     end
 
     msg = @socket.gets
     results = parseInt(msg)
-    @socket.puts("\#\r")
+    @socket.write("\#\r\n")
     return results
   end
 
